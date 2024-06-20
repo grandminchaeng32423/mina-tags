@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Tweet with Retweet Functionality</title>
+</head>
+<body>
+    <!-- Embedded Tweet -->
+    <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">🌟 DISTRICT 6 &amp; ONCE 🌟<br><br>Mina&#39;s meet and greet in
+            Malaysia for SK-II is just around the corner! Let&#39;s show our love and support by trending these
+            hashtags:<br><br>Follow <a href="https://twitter.com/FanunionMina">@FanunionMina</a> <a
+                href="https://x.com/MinaMyouiBrasil">@MinaMyouiBrasil</a> for more updates and instructions.
+            <a href="https://twitter.com/hashtag/MINA?src=hash">#MINA</a> <a href="https://twitter.com/JYPETWICE">@JYPETWICE</a>
+            <a href="https://t.co/T88JdADy9l">pic.twitter.com/T88JdADy9l</a>
+        </p>&mdash; zeed (@grand_minchaeng)
+        <a href="https://twitter.com/grand_minchaeng/status/1803622093176840480">June 20, 2024</a>
+    </blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <!-- Retweet Button -->
+    <button onclick="retweetWithText()">Retweet with Text</button>
+
+    <script>
+        function retweetWithText() {
+            var tweetText = "🌟 DISTRICT 6 & ONCE 🌟\n\n" +
+                "Mina's meet and greet in Malaysia for SK-II is just around the corner! Let's show our love and support by trending these hashtags:\n\n" +
+                "Follow @FanunionMina @MinaMyouiBrasil for more updates and instructions.\n\n" +
+                "#MINA @JYPETWICE";
+
+            var tweetUrl = 'https://twitter.com/grand_minchaeng/status/1803622093176840480'; // URL of the original tweet
+
+            var retweetUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetText) + '&url=' + encodeURIComponent(tweetUrl);
+
+            // Open the retweet URL in a new window
+            window.open(retweetUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
